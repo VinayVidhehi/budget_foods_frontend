@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./Component/Home";
 import Login from "./Component/Login";
 import Details from "./Component/Details";
+import Signin from "./Component/Signin";
 import Cart from "./Component/Cart";
 import Restaurant from "./Component/Restaurant";
 import RestaurantCred from "./Component/RestaurantCreds";
@@ -41,6 +42,11 @@ function App() {
           <Stack.Screen
             component={Orders}
             name="orders"
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            component={Signin}
+            name="signin"
             options={{ headerShown: false }}
           />
           <Stack.Screen

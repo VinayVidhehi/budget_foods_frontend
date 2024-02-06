@@ -42,6 +42,11 @@ const Login = () => {
     }
   };
 
+  const handleSignin = async() => {
+    console.log("signin clicked");
+    navigation.navigate('signin');
+  }
+
   const handleLogin = async () => {
     setLoading(true); // Set loading to true when the request starts
 
@@ -94,7 +99,7 @@ const Login = () => {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Sign In</Text>
+        <Text style={styles.title}>Sign Up</Text>
         <TextInput
           style={styles.input}
           placeholder="Email"
@@ -133,8 +138,9 @@ const Login = () => {
             <Text style={{ color: "#fff", textAlign: "center" }}>Login</Text>
           )}
         </Pressable>
-        <Text style={styles.forgotPassword}>Forgot Password?</Text>
+        {/* <Text style={styles.forgotPassword}>Forgot Password?</Text> */}
       </View>
+      <Pressable onPress={handleSignin}><View style={styles.button}><Text style={{textAlign:'center'}}>sign-in</Text></View></Pressable>
     </View>
   );
 };
@@ -184,6 +190,7 @@ const styles = StyleSheet.create({
     padding: 10,
     fontSize: 16,
     width: '100%',
+    marginTop: 10,
   },
   
   forgotPassword: {

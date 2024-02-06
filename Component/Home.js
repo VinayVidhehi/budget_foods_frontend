@@ -37,7 +37,7 @@ const Home = ({ route, navigation }) => {
   
   const handleLogOut = async() => {
     await AsyncStorage.removeItem('user');
-    navigation.navigate('login');
+    navigation.navigate('signin');
     console.log("user removed successfully");
   }
 
