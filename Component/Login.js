@@ -72,7 +72,7 @@ const Login = () => {
       }
     } else {
       try {
-        const res = await axios.post("https://budgetfoods.onrender.com/sign-up-otp", {
+        const res = await axios.post("https://budgetfoods.onrender.com/signup-otp", {
           email,
           password,
           otp,
